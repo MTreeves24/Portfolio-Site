@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 <script src="https://use.fontawesome.com/c14a985946.js"></script>
+
 <script
-  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-  crossorigin="anonymous"></script>
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="portfolioGrid.css">
+<link rel="stylesheet" type="text/css" href="icons/font-mfizz.css">
     <title>Portfolio</title>
 </head>
 
@@ -19,12 +21,12 @@
     <div class="hamburger"></div>
     </div>
     <ul class="open desktop">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about-grid">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio-grid">Portfolio</a></li>
+        <li><a href="#contact-grid">Contact</a></li>
     </ul>
 </nav>
-<div class="container">
 
 <div class="grid-area heading">
 <h1 class="title">Front End Developer</h1>
@@ -33,34 +35,71 @@
     </blockquote>
 </div> <!--Heading-->
 
+<section id="about-grid">
 <div class="grid-area mypic">
     <img class="profilepic" src="http://i.imgur.com/W7Qt0Lv.jpg" alt="profile pic"></a>
 </div> <!--mypic-->
 <div class="grid-area about" id="about">
-    <h1 class="mike">I'm Mike</h1><p>A self-taught Web Developer with great desire to work in the industry following a drastic career change.<br><br>
-    Over the past three months, I have been off work and intensively studying the necessary to achieve my dream job.</p>
-    <p>I currently have a great understanding of HTML and CSS, and intermediate level of Javascript, jQuery and the Bootstrap Framework.<br><br>
-    My knowledge comes from resources such as FreeCodeCamp, CodeAcademy, Colt Steele's Web Developer Bootcamp, Sololearn and Lynda.com.</p>
+    <h1 class="mike">I'm Mike</h1><p>A self-taught Web Developer with an increasing portfolio following a drastic career change from the travel industry.</p>
+    <p>The Web has always been my passion and I live for the opportunity to work with people who share the same love for the internet and technology.</p>
+    <p>I currently have a great understanding of HTML and CSS, and intermediate level of Javascript, and jQuery. Within a few weeks I hope to be introducing myself to the React</p>
+    <p>My knowledge comes from resources such as FreeCodeCamp, CodeAcademy, Udemy, Sololearn and Lynda.com, where i've built strong knowledge of the latest industry standards and best practices.</p>
 </div><!--about-->
-<div class="grid-area portfolio" id="portfolio">
-    <div class="grid-area portfolio1">
-    <img class="placeholderimg" src="http://www.3brecruitment.co.uk/website/assets/images/placeholders/portfolio-placeholder.jpg">
+</div>
+</section>
+
+<section id="skills">
+  <h1>My Skills</h1>
+  <i class="icon-html5-alt"></i>
+  <i class="icon-css3-alt"></i>
+  <i class="icon-javascript-alt"></i>
+  <i class="icon-jquery"></i>
+  <i class="icon-nodejs"></i>
+  <i class="icon-git"></i>
+  <i class="fa fa-github"></i>
+</section> <!--skills section-->
+
+<div class="grid-area" id="portfolio-grid">
+<h1 class="portfolio-headline">My Portfolio</h1>
+    <div class="portfolio-images portfolio1">
+    <a href="https://mtreeves24.github.io/Wilbur-Bespoke-Carpentry/" target="_blank"> <img class="portfolio-image" src="https://i.imgur.com/klp8xUS.png?1" alt="Bespoke-Carpentry">
+    <span class="overlay">Fully responsive website created for my neighbour's carpentry business, with a mix of HTML, CSS, Javascript and jQuery</span><span class="overlay-mobile">Carpentry Website</span></a></img>
     </div>
-    <div class="grid-area portfolio2">
-    <a href="https://github.com/MTreeves24/Color-Game" target="_blank"> <img class="colorgame" src="http://i.imgur.com/Dut7wsF.png?1" alt="Color Game">
-    <span class="overlay">A Colour Game created with HTML, CSS and Javascript</a></img>
+
+    <div class="portfolio-images portfolio2">
+    <a href="https://mtreeves24.github.io/Colour-Game/" target="_blank"> <img class="portfolio-image" src="https://i.imgur.com/ukJ3Rez.png?1" alt="Colour Game">
+    <span class="overlay">A Colour Game created with HTML, CSS and Javascript, made with the help of Colt Steele's Udemy Bootcamp</span><span class="overlay-mobile">Colour Game</span></a></img>
     </div>
-    <div class="grid-area portfolio3">
-    <img class="placeholderimg" src="http://www.3brecruitment.co.uk/website/assets/images/placeholders/portfolio-placeholder.jpg">
+
+    <div class="portfolio-images portfolio3">
+    <a href="https://mtreeves24.github.io/Battleship/" target="_blank"> <img class="portfolio-image" src="https://i.imgur.com/V46jPGf.png?1" alt="Battleship">
+    <span class="overlay">A Battleship game created using a whole lotta javascript! Made with the help of HeadFirst Javascript by Freeman & Robson</span><span class="overlay-mobile">Battleship Game</span></a></img>
+    </div>
+
+    <div class="portfolio-images portfolio4">
+    <a href="https://mtreeves24.github.io/CountDownTimer/" target="_blank"> <img class="portfolio-image" src="https://i.imgur.com/ytrkvec.png?1" alt="Countdown Timer">
+    <span class="overlay">Countdown timer created for home use, created with HTML, CSS and Javascript</span><span class="overlay-mobile">Countdown Timer</span></a></img>
+    </div>
+
+    <div class="portfolio-images portfolio5">
+    <a href="https://mtreeves24.github.io/ToDo-List/" target="_blank"> <img class="portfolio-image" src="https://i.imgur.com/TuiffBx.png?2" alt="Todo List">
+    <span class="overlay">Todo list created with HTML, CSS and jQuery with the help of Colt Steele's Udemy Bootcamp</span><span class="overlay-mobile">Todo List</span></a></img>
+    </div>
+
+    <div class="portfolio-images portfolio6">
+    <a href="https://github.com/MTreeves24/Color-Game" target="_blank"> <img class="portfolio-image" src="https://i.imgur.com/0Tc4jvN.jpg?2" alt="placeholder"></a>
     </div>
 </div> <!--Portfolio-->
 
+<div id="contact-grid">
   <div class="grid-area social">
     <fieldset>
     <legend>Social Media</legend>
-        <a href="https://www.linkedin.com/in/michael-treeves-b95179115/" <i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i><span class="sr-only">LinkedIn</span></a>
+        <a href="https://www.linkedin.com/in/michael-treeves-b95179115/"><i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i><span class="sr-only">LinkedIn</span></a>
         <br>
         <a href="https://www.facebook.com/mtreeves"><i class="fa fa-facebook" aria-hidden="true" target="_blank"></i><span class="sr-only">Facebook</span></a>
+        <br>
+        <a href="https://github.com/MTreeves24"><i class="fa fa-github" aria-hidden="true" target="_blank"></i><span class="sr-only">Facebook</span></a>
     </fieldset>
     </div> <!--Social-->
 <div class="grid-area contact" id="contact">
@@ -80,15 +119,13 @@
           </div>
 
         <form method="post" action="mailto:mtreeves24@gmail.com">
-        <input class="submit" type="submit" value="Submit">
+        <input class="submit" type="submit" value="Submit"></form>
       </fieldset>
     </div> <!--Contact-->
-
-
+</div>
 <div class="copyright">Website design by Michael Treeves</div>
 
 
-</div> <!--container-->
 
 
 <script type="text/javascript" src="portfolioGrid.js"></script>
