@@ -159,7 +159,7 @@ nav a:hover,  nav a:focus {
   grid-area:heading;
     background:url(http://i.imgur.com/vf2CKfB.jpg) no-repeat fixed;
     background-size: cover;
-    height: 100vh;
+    height: 87vh;
 }
 
 .title{
@@ -220,6 +220,7 @@ blockquote::before{
 }
 
 .about{
+    margin-top: -15px;
     grid-area:about;
     font-family: 'Lora', serif;
 }
@@ -234,7 +235,7 @@ blockquote::before{
   background:url(https://i.imgur.com/RZi9R2S.jpg?1) no-repeat fixed;
   background-size: cover;
   text-align: center;
-  padding:20px 0px 30px 0px;
+  padding:30px 0px 40px 0px;
 }
 
 #skills h1{
@@ -305,13 +306,11 @@ blockquote::before{
     width: 100%;
     border:solid black 5px;
     box-shadow: 10px 10px 30px grey;
-    border-radius: 20px;
 }
 
 .overlay{
   background-color: rgba(8,8,8,0.6);
   border-top: 0.2px solid black;
-  border-radius: 0px 0px 20px 15px;
   color:#eee;
   position: absolute;
   font-size: 1vw;
@@ -328,7 +327,6 @@ blockquote::before{
   line-height: 1.5;
   background-color: rgba(0,0,0,0.6);
   border-top: 0.2px solid black;
-  border-radius: 0px 0px 20px 15px;
   color:#eee;
   position: absolute;
   margin:0 auto;
