@@ -102,7 +102,7 @@ nav {
   grid-column: 1/-1; }
 
 .hero {
-  background: url(http://i.imgur.com/vf2CKfB.jpg) no-repeat fixed;
+  background: url(images/heroimg.jpg) no-repeat fixed;
   background-size: cover;
   background-position: -230px 0px; }
   .hero .title {
@@ -171,7 +171,7 @@ nav {
   grid-column: 2; }
 
 #skills {
-  background: url(https://i.imgur.com/RZi9R2S.jpg?1) no-repeat fixed;
+  background: url(images/codepic.png) no-repeat fixed;
   background-size: cover;
   text-align: center;
   padding-bottom: 50px; }
@@ -389,4 +389,4 @@ nav {
     font-size: 1vw;
     line-height: 2; } }
 
-/*# sourceMappingURL=recoded.css.map */
+/*# sourceMappingURL=portfolio.css.map */

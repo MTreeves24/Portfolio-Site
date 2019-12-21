@@ -1,4 +1,4 @@
-//SMOOTH SCROLLING//
+//smooth scrolling//
 
 // Select all links with hashes
 $('a[href*="#"]')
