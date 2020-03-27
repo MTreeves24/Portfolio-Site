@@ -1,89 +1,52 @@
-//smooth scrolling//
+function wait(ms=0){
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-// Select all links with hashes
-$('a[href*="#"]')
-.click(function(event) {
-  // On-page links
-  if (
-    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-  ) {
-    // Figure out element to scroll to
-    var target = $(this.hash);
-    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-    // Does a scroll target exist?
-    if (target.length) {
-      $('html, body').animate({
-        scrollTop: target.offset().top -50
-      }, 1000, function() {
-        // Callback after animation
-        // Must change focus!
-        var $target = $(target);
-        $target.focus();
-        if ($target.is(":focus")) { // Checking if the target was focused
-          return false;
-        }
-      });
-    }
+function getRandomBetween(min = 50, max = 150, randomNumber = Math.random()){
+  return Math.floor(randomNumber * (max - min) + min);
+}
+
+//Typed-Effect Text
+async function draw (el) {
+  const text = el.textContent;
+  let soFar = "";
+  for (const letter of text) {
+    soFar += letter;
+    el.textContent = soFar;
+    // wait for some amount of time
+    const { typeMin, typeMax } = el.dataset;
+    const waitTime = getRandomBetween(typeMin, typeMax);
+    await wait(waitTime)
   }
-});
+}
 
-//Scroll button
-  $(function() {
-    $('a[href*=#]').on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-    });
-  });
+document.querySelectorAll(".title").forEach(draw);
 
-  $(window).scroll(function() {
-    if($(this).scrollTop() > 650)  /*height in pixels when the navbar becomes non opaque*/
-    {
-        $('.opaque-navbar').addClass('opaque');
+//Code to turn navbar opaque on scroll
+var nav = document.querySelector('nav'); 
+
+window.addEventListener('scroll', function(event) { 
+    event.preventDefault();
+
+    if (window.scrollY >= 450) { 
+        nav.classList.add("solid-navbar");
+        nav.classList.remove("opaque-navbar");
     } else {
-        $('.opaque-navbar').removeClass('opaque');
+        nav.classList.add("opaque-navbar");
+        nav.classList.remove("solid-navbar");
     }
 });
 
-
-$(document).ready(function(){
-    // Show hide popover
-    $(".menu-toggle").click(function(){
-      $('ul').toggleClass('opening');
-      $(this).toggleClass('open');
-    });
-});
-$( 'ul a' ).on("click", function(){
-  $('ul').removeClass('opening');
-  $('.menu-toggle').removeClass('open');
-
-});
-
-
-$(".icon-html5-alt").hover(function(){
-  $(".caption-html").toggleClass("icon-captions-show");
-});
-$(".icon-css3-alt").hover(function(){
-  $(".caption-css").toggleClass("icon-captions-show");
-});
-$(".icon-sass").hover(function(){
-  $(".caption-sass").toggleClass("icon-captions-show");
-});
-$(".icon-javascript-alt").hover(function(){
-  $(".caption-js").toggleClass("icon-captions-show");
-});
-$(".icon-jquery").hover(function(){
-  $(".caption-jquery").toggleClass("icon-captions-show");
-});
-$(".icon-nodejs").hover(function(){
-  $(".caption-node").toggleClass("icon-captions-show");
-});
-$(".icon-git").hover(function(){
-  $(".caption-git").toggleClass("icon-captions-show");
-});
-$(".fa-github").hover(function(){
-  $(".caption-github").toggleClass("icon-captions-show");
-});
+//Code to open and close hamburger menu
+const hamburger = document.querySelector(".menu-toggle");
+const hamburgerItem = document.querySelectorAll(".hamburger-item");
 
 
 
-
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+if (viewportWidth < 679) {
+	hamburgerItem.forEach(x => x.addEventListener("click", () => document.querySelector("ul").classList.toggle("opening")))
+  hamburger.addEventListener("click", () => document.querySelector("ul").classList.toggle("opening"))
+} else {
+	console.log('Small viewport');
+}

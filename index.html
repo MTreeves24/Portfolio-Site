@@ -3,27 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="recoded.css">
-  <script src="https://use.fontawesome.com/c14a985946.js"></script>
-  <script
-      src="https://code.jquery.com/jquery-3.2.1.min.js"
-      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-      crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/c14a985946.js"  SameSite="none Secure"></script>
   <link rel="stylesheet" type="text/css" href="portfolio.css">
   <link rel="stylesheet" type="text/css" href="icons/font-mfizz.css">
   <title>Mike Treeves - Portfolio</title>
 </head>
 
 <body>
-  <nav class="site-nav nav opaque-navbar">
+  <nav id="nav" class="site-nav nav ">
     <div class="menu-toggle">
       <div class="hamburger"></div>
       </div>
       <ul class="open desktop">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#get-in-touch">Contact</a></li>
+          <li class="hamburger-item"><a href="#about">About</a></li>
+          <li class="hamburger-item"><a href="#skills">Skills</a></li>
+          <li class="hamburger-item"><a href="#portfolio">Portfolio</a></li>
+          <li class="hamburger-item"><a href="#get-in-touch">Contact</a></li>
       </ul>
   </nav>
 <div class="container">
@@ -45,24 +40,25 @@
   </section>
   <section id="skills">
       <h1>My Skills</h1>
-        <i class="icon-html5-alt icon"></i>
-        <i class="icon-css3-alt icon"></i>
-        <i class="icon-sass icon"></i>
-        <i class="icon-javascript-alt icon"></i>
-        <i class="icon-nodejs icon"></i>
-        <i class="icon-git icon"></i>
-        <i class="fa fa-github icon"></i>
+        <i class="icon-html5-alt icon">
+          <div class="caption caption-html">I write clean, readable mark-up with HTML5</div>
+        </i>
+        <i class="icon-css3-alt icon">
+          <div class="caption caption-css">I make things look pretty with CSS3</div>
+        </i>
+        <i class="icon-sass icon">
+          <div class="caption caption-sass">I stay organised with SASS</div>
+        </i>
+        <i class="icon-javascript-alt icon">
+          <div class="caption caption-js">I put the 'fun' in function with Javascript</div>
+        </i>
+        <i class="icon-nodejs icon">
+          <div class="caption caption-node">I have a little experience with some back-end through NodeJS</div>
+        </i>
+        <i class="icon-git icon">
+          <div class="caption caption-git">I understand version-control with GIT</div>
+        </i>
         <br>
-      <div class="icon-captions">
-        <div class="caption caption-html">I write clean, readable mark-up with HTML5</div>
-        <div class="caption caption-css">I make things look pretty with CSS3</div>
-        <div class="caption caption-sass">I stay organised with SASS</div>
-        <div class="caption caption-js">I put the 'fun' in function with Javascript</div>
-        <div class="caption caption-node">I have a little experience with some back-end through NodeJS</div>
-        <div class="caption caption-git">I understand version-control with GIT</div>
-        <div class="caption caption-github">I believe sharing is caring with Github</div>
-        <div class="caption caption-git">I understand version-control with GIT</div>
-      </div>
   </section>
 
   <section id="portfolio">
@@ -89,14 +85,17 @@
       </div>
       <div class="portfolio-item6 work-item"><a href="https://mtreeves24.github.io/Weather-App-Redesigned/" target="_blank"> <img class="portfolio-image" src="images/weatherapp.jfif" alt="Todo List">
     <span class="overlay">Local Weather App created as part of FreeCodeCamp's intermediate projects, focusing on APIs and AJAX</span><span class="overlay-mobile">Weather App</span></a></img></div>
-          <a class="see-more work-item" href="https://github.com/MTreeves24" target="_blank">See more on my GitHub Account <i class="fa fa-github" aria-hidden="true" target="_blank"></i></a>
+    <div class="see-more-of-me">
+          <a class="see-more work-item" href="https://github.com/MTreeves24" target="_blank">See more on my GitHub Account <i class="fa fa-github" aria-hidden="true"></i></a>
+          <a class="see-more work-item" href="https://1drv.ms/b/s!Ar-8DVU0GnHXieBm_xUFR9kiwmKwRw?e=i4V7Bx" target="_blank">Download my CV <i class="fa fa-download" aria-hidden="true"></i></a>
+        </div>
   </section>
 
 
   <section class="item" id="get-in-touch">
       <div class="social">
         <fieldset>
-         <legend align="center">Social Media</legend>
+         <legend>Social Media</legend>
              <a href="https://www.linkedin.com/in/michael-treeves-b95179115/"><i class="fa fa-linkedin" aria-hidden="true" target="_blank"></i><span class="sr-only">LinkedIn</span></a>
              <a href="https://www.facebook.com/mtreeves"><i class="fa fa-facebook" aria-hidden="true" target="_blank"></i><span class="sr-only">Facebook</span></a>
              <a href="https://github.com/MTreeves24"><i class="fa fa-github" aria-hidden="true" target="_blank"></i><span class="sr-only">Facebook</span></a>
@@ -104,7 +103,7 @@
       </div>
       <div class="contact">
         <fieldset>
-            <legend align="center">Email me</legend>
+            <legend>Email me</legend>
 
             <form action="https://formspree.io/mtreeves24@gmail.com"
                   method="POST">

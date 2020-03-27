@@ -3,6 +3,7 @@ html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
   Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -22,7 +23,6 @@ nav {
   margin: 0;
   padding: 0;
   width: 100%;
-  background: rgba(100,100,150,0.9);
   font-size: 25px;
   z-index: 10;
     ul {
@@ -94,6 +94,10 @@ nav {
 //HAMBURGER END//
 
 //OPAQUE NAVBAR//
+.solid-navbar{
+  background: rgba(100,100,150,0.9);
+}
+
 .opaque-navbar {
     background-color: rgba(0,0,0,0);
     height: 50px;
@@ -109,10 +113,10 @@ nav {
 
 .container {
   display: grid;
-  grid-template-rows: 100vh auto auto auto auto auto;
+  grid-template-rows: 100vh auto;
 }
 
-.hero , .about , .portfolio , .get-in-touch , .footer{
+.hero , .about , .portfolio , .see-more-of-me, .get-in-touch , .footer{
 grid-column: 1/-1;
 }
 
@@ -210,6 +214,7 @@ grid-column: 1/-1;
   background-size: cover;
   text-align: center;
   padding-bottom:50px;
+
     h1{
       color: white;
       text-shadow: 2px 2px 0px black;
@@ -217,7 +222,7 @@ grid-column: 1/-1;
     }
     i{
       font-size: 70px;
-      padding: 10px 10px;
+      margin: 10px 30px;
       color:rgb(0,100,216);
       text-shadow: 2px 2px 3px #111;
     }
@@ -225,16 +230,8 @@ grid-column: 1/-1;
       color: rgb(243, 156, 18);
     }
 }
-.icon-captions{
-  color: transparent;
-  font-size: 19px;
-  padding:0;
-}
-.caption{
-  display:none;
-}
 
-.icon-captions-show{
+.icon:hover .caption{
   display: block;
   text-shadow: 1px 1px 1px black;
   position: absolute;
@@ -242,6 +239,13 @@ grid-column: 1/-1;
   right:0;
   color:white;
 }
+
+.caption{
+  display:none;
+  font-size: 19px;
+  padding:0;
+}
+
 //SKILLS END//
 
 //PORTFOLIO START//
@@ -294,9 +298,14 @@ grid-column: 1/-1;
     box-shadow: 10px 10px 30px grey;
   }
 }
+
+.see-more-of-me{
+  display:flex;
+  justify-content: center;
+}
 .see-more{
   @include work;
-  margin-top: 20px;
+  margin:20px 10px 5px 10px;
   padding:10px;
   border:1px solid white;
   grid-column: 1/-1;
