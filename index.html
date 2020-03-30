@@ -23,7 +23,7 @@
   </nav>
 <div class="container">
   <section class="item hero">
-      <h1 class="title">Web Developer</h1>
+      <h1 class="title">Front End Developer</h1>
           <blockquote>
            Design is not just what it looks and feels like. Design is how it works."<br> - <i>Steve Jobs</i>
           </blockquote>
@@ -40,6 +40,7 @@
   </section>
   <section id="skills">
       <h1>My Skills</h1>
+      <div class="skill-icons">
         <i class="icon-html5-alt icon">
           <div class="caption caption-html">I write clean, readable mark-up with HTML5</div>
         </i>
@@ -58,37 +59,98 @@
         <i class="icon-git icon">
           <div class="caption caption-git">I understand version-control with GIT</div>
         </i>
+        </div>
         <br>
   </section>
 
   <section id="portfolio">
     <h1 class="portfolio-title">Portfolio</h1>
-      <div class="portfolio-item1 work-item">
-        <a href="https://www.purepetpassion.co.uk" target="_blank"> <img class="portfolio-image" src="images/ppp.jfif" alt="Pure Pet Passion">
-        <span class="overlay">Fully responsive website created for a local business offering various pet services</span><span class="overlay-mobile">Pet Services Website</span></a></img>
+    <div class="portfolio-card">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_54,w_679/v1585561998/Portfolio/ppp.webp)"></div>
       </div>
-      <div class="portfolio-item2 work-item">
-        <a href="https://mtreeves24.github.io/Colour-Game/" target="_blank"> <img class="portfolio-image" src="images/colorgame.png" alt="Colour Game">
-            <span class="overlay">A Colour Game created with HTML, CSS and Javascript, made with the help of Colt Steele's Udemy Bootcamp</span><span class="overlay-mobile">Colour Game</span></a></img>
+      <div class="portfolio-desc">
+        <h1>Pet Services Website</h1>
+        <h2>HTML, CSS (SCSS) and Javascript with some jQuery</h2>
+        <p> Fully responsive website, created for a local business. Formspree used for form and Photorama for image gallery.</p>
+        <p>UI overhaul in progress whereby I also intend to phase out jQuery in favour of vanilla JS. </p>
+        <br>
+        <a href="#" class="open-link">See full site here</a>
       </div>
-      <div class="portfolio-item3 work-item">
-        <a href="https://mtreeves24.github.io/Battleship/" target="_blank"> <img class="portfolio-image" src="images/battleship.png" alt="Battleship">
-            <span class="overlay">A Battleship game created using a whole lotta Javascript! Made with the help of "HeadFirst Javascript"</span><span class="overlay-mobile">Battleship Game</span></a></img>
+    </div>
+  
+  
+    <div class="portfolio-card alt">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_60,w_933/v1585562002/Portfolio/weatherapp.webp)"></div>
       </div>
-      <div class="portfolio-item4 work-item">
-        <a href="https://mtreeves24.github.io/CountDownTimer/" target="_blank"> <img class="portfolio-image" src="images/countdown.png" alt="Countdown Timer">
-            <span class="overlay">Countdown timer created for home use, created with HTML, CSS and Javascript</span><span class="overlay-mobile">Countdown Timer</span></a></img>
+      <div class="portfolio-desc">
+        <h1>Local Weather App</h1>
+        <h2>HTML, CSS and Javascript, with the OpenWeatherMap API</h2>
+        <p>Created as part of the FreeCodeCamp curriculum, this local weather application uses Geolocation and the OpenWeatherMap API to detect location and respond with some current weather information.</p>
+        <p>A future update will add functionality to manually input any location.</p>
+        <br>
+        <a href="#" class="open-link">See full site here</a>
       </div>
-      <div class="portfolio-item5 work-item">
-        <a href="https://mtreeves24.github.io/ToDo-List/" target="_blank"> <img class="portfolio-image" src="images/todolist.png" alt="Todo List">
-            <span class="overlay">Todo list created with HTML, CSS and jQuery with the help of Colt Steele's Udemy Bootcamp</span><span class="overlay-mobile">Todo List</span></a></img>
+    </div>
+  
+    <div class="portfolio-card">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_54,w_800/v1585562307/Portfolio/Unsplash-Photo-Generator.webp)"></div>
       </div>
-      <div class="portfolio-item6 work-item"><a href="https://mtreeves24.github.io/Weather-App-Redesigned/" target="_blank"> <img class="portfolio-image" src="images/weatherapp.jfif" alt="Todo List">
-    <span class="overlay">Local Weather App created as part of FreeCodeCamp's intermediate projects, focusing on APIs and AJAX</span><span class="overlay-mobile">Weather App</span></a></img></div>
-    <div class="see-more-of-me">
-          <a class="see-more work-item" href="https://github.com/MTreeves24" target="_blank">See more on my GitHub Account <i class="fa fa-github" aria-hidden="true"></i></a>
-          <a class="see-more work-item" href="https://1drv.ms/b/s!Ar-8DVU0GnHXieBm_xUFR9kiwmKwRw?e=i4V7Bx" target="_blank">Download my CV <i class="fa fa-download" aria-hidden="true"></i></a>
-        </div>
+      <div class="portfolio-desc">
+        <h1>UnSplash Photo Generator</h1>
+        <h2>HTML, CSS, AXIOS, ReactJS</h2>
+        <p> This was my first real project using the ReactJS library. </p>
+        <p>Enables a search of the Unsplash image database using AXIOS, with a "see more" function to load more images.</p>
+        <p>I also experimented with a CSS colour-changing gradient background colour</p>
+        <br>
+        <a href="#" class="open-link">See full site here</a>
+      </div>
+    </div>
+  
+    <div class="portfolio-card alt">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_66,w_709/v1585562001/Portfolio/furnituresite.webp)"></div>
+      </div>
+      <div class="portfolio-desc">
+        <h1>Carpentry Website</h1>
+        <h2>Made with HTML, CSS (SCSS) and Javascript</h2>
+        <p> Website created for a local carpentry business.</p>
+        <p>Unfortunately the business no longer operates so website is not live, so information has been changed for privacy reasons</p>
+        <br>
+        <a href="#" class="open-link">See full site here</a>
+      </div>
+    </div>
+  
+    <div class="portfolio-card">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_66,w_662/v1585561999/Portfolio/colorgame.webp)"></div>
+      </div>
+      <div class="portfolio-desc">
+        <h1>RGB Colour Game</h1>
+        <h2>Made with HTML, CSS and Javascript</h2>
+        <p> A simple colour game made with the help of a Udemy tutorial from Colt Steele.</p>
+        <p>It has proven to be a great way to learn the RGB colour codes too!</p>
+        <br>
+        <a href="#" class="open-link">See full site here</a>
+      </div>
+    </div>
+  
+    <div class="portfolio-card alt">
+      <div class="meta">
+        <div class="photo" style="background-image: url(https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_56,w_781/v1585563026/Portfolio/GitHub-Finder.webp)"></div>
+      </div>
+      <div class="portfolio-desc">
+        <h1>GitHub Profile Finder</h1>
+        <h2>Made with HTML, CSS (SCSS) and Javascript</h2>
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque ad aliquam facilis numquam. Veritatis, sit.</p>
+        <br>
+        <a href="#" class="open-link">See full site here</a>
+      </div>
+    </div>
+
+    
   </section>
 
 

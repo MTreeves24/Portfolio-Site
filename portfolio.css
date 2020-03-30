@@ -11,7 +11,7 @@ html {
 
 body {
   margin: 0;
-  background-color: #2B2D42;
+  background-color: #2b2d42;
   color: white; }
 
 nav {
@@ -44,7 +44,8 @@ nav {
     padding: 10px 30px 10px 5px;
     text-decoration: none;
     background: rgba(100, 100, 150, 0.9); }
-  nav a:hover, nav nav a:focus {
+  nav a:hover,
+  nav nav a:focus {
     color: #f3c412; }
 
 /* CSS MENU TOGGLE*/
@@ -52,13 +53,15 @@ nav {
   position: fixed;
   padding: 0.8em;
   top: 0.25em;
-  right: .5em;
+  right: 0.5em;
   cursor: pointer; }
 
-.hamburger, .hamburger::before, .hamburger::after {
-  content: '';
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
   display: block;
-  background: #EBEBD3;
+  background: #ebebd3;
   height: 3px;
   width: 2em;
   border-radius: 1px;
@@ -101,7 +104,12 @@ nav {
   display: grid;
   grid-template-rows: 100vh auto; }
 
-.hero, .about, .portfolio, .see-more-of-me, .get-in-touch, .footer {
+.hero,
+.about,
+.portfolio,
+.see-more-of-me,
+.get-in-touch,
+.footer {
   grid-column: 1/-1; }
 
 .hero {
@@ -151,7 +159,11 @@ nav {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite; }
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+    20%,
+    50%,
+    80%,
+    100% {
     transform: translateY(-10px); }
   40% {
     transform: translateY(-20px); }
@@ -176,39 +188,35 @@ nav {
 #skills {
   background: url(images/codepic.png) no-repeat fixed;
   background-size: cover;
-  text-align: center;
-  padding-bottom: 50px; }
+  text-align: center; }
   #skills h1 {
     color: white;
     text-shadow: 2px 2px 0px black;
-    font-size: 40px; }
-  #skills i {
-    font-size: 70px;
-    margin: 10px 30px;
-    color: #0064d8;
-    text-shadow: 2px 2px 3px #111; }
-  #skills i:hover {
-    color: #f39c12; }
+    font-size: 40px;
+    margin-bottom: 50px; }
+  #skills .skill-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; }
+    #skills .skill-icons .icon {
+      font-size: 70px;
+      margin: 0px 5px;
+      color: #0064d8;
+      text-shadow: 2px 2px 3px #111; }
+    #skills .skill-icons i:hover {
+      color: #f39c12; }
 
 .icon:hover .caption {
-  display: block;
+  visibility: visible;
   text-shadow: 1px 1px 1px black;
-  position: absolute;
-  left: 0;
-  right: 0;
   color: white; }
 
 .caption {
-  display: none;
-  font-size: 19px;
-  padding: 0; }
+  visibility: hidden;
+  font-size: 19px; }
 
 #portfolio {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  background-color: #EDF2F4;
-  padding: 15px; }
+  padding: 15px;
+  background-color: #edf2f4; }
 
 .portfolio-title {
   margin: 5px 0px 15px 0px;
@@ -225,71 +233,110 @@ nav {
     height: 7px;
     background: linear-gradient(to var(--direction, left), #1e1919, transparent); }
   .portfolio-title:after {
-    --direction:right; }
+    --direction: right; }
 
-.work-item {
-  margin: 5px; }
-  .work-item:hover {
-    transition: all .1s ease-in-out;
-    transform: scale(1.02); }
-
-.portfolio-item1, .portfolio-item2, .portfolio-item3, .portfolio-item4, .portfolio-item5, .portfolio-item6 {
-  position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  text-align: center; }
-  .portfolio-item1 img, .portfolio-item2 img, .portfolio-item3 img, .portfolio-item4 img, .portfolio-item5 img, .portfolio-item6 img {
-    width: 100%;
-    border: solid white 1px;
-    box-shadow: 10px 10px 30px grey; }
-
-.see-more-of-me {
+.portfolio-card {
   display: flex;
-  justify-content: center; }
-
-.see-more {
-  position: relative;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #fff;
-  text-align: center;
-  margin: 20px 10px 5px 10px;
-  padding: 10px;
-  border: 1px solid white;
-  grid-column: 1/-1;
-  justify-self: center;
-  box-shadow: 5px 5px 10px grey;
-  text-decoration: none;
-  color: #111; }
-  .see-more i {
-    font-size: 50px; }
-
-.overlay {
-  background-color: rgba(250, 250, 250, 0.6);
-  border-top: 0.2px solid white;
-  color: #111;
-  position: absolute;
-  width: 100%;
-  bottom: 4px;
-  left: 0px;
-  display: none;
-  padding: 0px 10px;
-  font-size: 1.5vw;
-  height: 18%;
-  line-height: 1.5; }
-
-.overlay-mobile {
-  background-color: rgba(250, 250, 250, 0.6);
-  border-top: 0.2px solid white;
-  color: #111;
-  position: absolute;
-  width: 100%;
-  bottom: 4px;
-  left: 0px;
-  display: block;
-  font-size: 3vw;
-  line-height: 1.2;
-  margin: 0 auto;
-  height: 15%; }
+  flex-direction: column;
+  color: black;
+  margin: 2rem auto;
+  box-shadow: 0 3px 7px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.6%;
+  background: #fff;
+  line-height: 1.4;
+  font-family: sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0; }
+  .portfolio-card:hover .photo {
+    transform: scale(1.1) rotate(2deg); }
+  .portfolio-card .meta {
+    position: relative;
+    z-index: 0;
+    height: 200px; }
+  .portfolio-card .photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform .2s; }
+  .portfolio-card .portfolio-desc {
+    padding: 1rem;
+    background: #fff;
+    position: relative;
+    z-index: 1; }
+    .portfolio-card .portfolio-desc h1,
+    .portfolio-card .portfolio-desc h2 {
+      font-family: Poppins, sans-serif; }
+    .portfolio-card .portfolio-desc h1 {
+      line-height: 1;
+      margin: 0;
+      font-size: 1.7rem; }
+    .portfolio-card .portfolio-desc h2 {
+      font-size: 1rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      color: #a2a2a2;
+      margin-top: 5px; }
+    .portfolio-card .portfolio-desc .open-link {
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      border: 2px solid #242424;
+      border-radius: 2px;
+      padding: 5px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 40%; }
+      .portfolio-card .portfolio-desc .open-link:hover {
+        border: 2px solid purple;
+        color: purple; }
+  .portfolio-card p {
+    position: relative;
+    margin: 1rem 0 0; }
+    .portfolio-card p:first-of-type {
+      margin-top: 1.25rem; }
+      .portfolio-card p:first-of-type:before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        background: #646496;
+        width: 35px;
+        top: -0.75rem;
+        border-radius: 3px; }
+  @media (min-width: 640px) {
+    .portfolio-card {
+      flex-direction: row;
+      max-width: 90%; }
+      .portfolio-card .meta {
+        flex-basis: 40%;
+        height: 300px; }
+      .portfolio-card .portfolio-desc {
+        flex-basis: 65%; }
+        .portfolio-card .portfolio-desc:before {
+          transform: skewX(-2deg);
+          content: "";
+          background: #fff;
+          width: 30px;
+          position: absolute;
+          left: -10px;
+          top: 0;
+          bottom: 0;
+          z-index: -1; }
+      .portfolio-card.alt {
+        flex-direction: row-reverse; }
+        .portfolio-card.alt .portfolio-desc:before {
+          left: inherit;
+          right: -10px;
+          transform: skew(2deg); }
+        .portfolio-card.alt .portfolio-desc a {
+          right: 40%;
+          left: 0;
+          bottom: 0; } }
 
 #get-in-touch {
   display: grid;
@@ -354,19 +401,17 @@ nav {
   nav a {
     background: none;
     height: 10%; }
-  nav a:hover, nav nav a:focus {
+  nav a:hover,
+  nav nav a:focus {
     transition: transform 0.1s;
     transform: scale(1.05);
     color: white; }
 
   .opaque-navbar {
-    transition: background-color .5s ease 0s; }
+    transition: background-color 0.5s ease 0s; }
 
   .hero {
     background-position: 0px 0px; }
-
-  #portfolio {
-    padding: 20px; }
 
   .overlay {
     display: block; }
@@ -374,9 +419,6 @@ nav {
   .overlay-mobile {
     display: none; } }
 @media (min-width: 1200px) {
-  #portfolio {
-    grid-template-columns: 1fr 1fr 1fr; }
-
   #about {
     grid-template-columns: 1fr 5fr 10fr 1fr;
     align-items: center;
@@ -391,6 +433,12 @@ nav {
   .overlay {
     height: 23%;
     font-size: 1vw;
-    line-height: 2; } }
+    line-height: 2; }
+
+  #skills .skill-icons {
+    padding: 0px 160px; }
+
+  .portfolio-card {
+    max-width: 65%; } }
 
 /*# sourceMappingURL=portfolio.css.map */
