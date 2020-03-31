@@ -51,6 +51,4 @@ if (viewportWidth < 679) {
   hamburger.addEventListener("click", () =>
     document.querySelector("ul").classList.toggle("opening")
   );
-} else {
-  console.log("Small viewport");
 }
