@@ -1,5 +1,5 @@
 function wait(ms = 0) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 function getRandomBetween(min = 50, max = 150, randomNumber = Math.random()) {
@@ -9,6 +9,7 @@ function getRandomBetween(min = 50, max = 150, randomNumber = Math.random()) {
 //Typed-Effect Text
 async function draw(el) {
   const text = el.textContent;
+
   let soFar = "";
   for (const letter of text) {
     soFar += letter;
@@ -25,7 +26,7 @@ document.querySelectorAll(".title").forEach(draw);
 // code to turn navbar opaque on scroll
 var nav = document.querySelector("nav");
 
-window.addEventListener("scroll", function(event) {
+window.addEventListener("scroll", function (event) {
   event.preventDefault();
 
   if (window.scrollY >= 450) {
@@ -43,12 +44,8 @@ const hamburgerItem = document.querySelectorAll(".hamburger-item");
 
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 if (viewportWidth < 679) {
-  hamburgerItem.forEach(x =>
-    x.addEventListener("click", () =>
-      document.querySelector("ul").classList.toggle("opening")
-    )
+  hamburgerItem.forEach((x) =>
+    x.addEventListener("click", () => document.querySelector("ul").classList.toggle("opening"))
   );
-  hamburger.addEventListener("click", () =>
-    document.querySelector("ul").classList.toggle("opening")
-  );
+  hamburger.addEventListener("click", () => document.querySelector("ul").classList.toggle("opening"));
 }
