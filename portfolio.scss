@@ -18,80 +18,6 @@ body {
   color: white;
 }
 
-//HERO START//
-.hero {
-  background: url(images/heroimg.jpg) no-repeat fixed;
-  background-size: cover;
-  background-position: -230px 0px;
-  .title {
-    width: 100%;
-    height: 120px;
-    text-align: center;
-    margin: 100px 0px;
-    font-size: 70px;
-    text-shadow: 1px 1px 1px #000;
-  }
-  blockquote {
-    display: inline-block;
-    background: #fff;
-    padding: 15px 20px 15px 45px;
-    position: relative;
-    font-family: Georgia, serif;
-    line-height: 1.2;
-    color: #eee;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-left: 10px solid #aaa;
-    border-right: 2px solid #aaa;
-    box-shadow: 2px 2px 15px #ccc;
-    i {
-      font-size: 15px;
-      color: #aaa;
-    }
-    &::before {
-      content: "\201C"; /*Unicode for Left Double Quote*/
-      font-size: 60px;
-      font-weight: bold;
-      position: absolute;
-      left: 10px;
-      top: 5px;
-    }
-  }
-  .bounce {
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 50px;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 2px black;
-  }
-
-  .bounce i {
-    -moz-animation: bounce 2s infinite;
-    -webkit-animation: bounce 2s infinite;
-    animation: bounce 2s infinite;
-  }
-
-  @keyframes bounce {
-    0%,
-    20%,
-    50%,
-    80%,
-    100% {
-      transform: translateY(-10px);
-    }
-    40% {
-      transform: translateY(-20px);
-    }
-    60% {
-      transform: translateY(-15px);
-    }
-  }
-}
-//HERO END//
-
-//NAVBAR START//
 nav {
   position: fixed;
   margin: 0;
@@ -209,6 +135,80 @@ nav {
   grid-column: 1/-1;
 }
 
+//HERO START//
+.hero {
+  background: url("https://res.cloudinary.com/mtreeves24/image/upload/c_scale,w_1693/v1589193910/Portfolio/jeremy-bishop-iyrJnPlkP68-unsplash.webp")
+    no-repeat;
+  background-attachment: fixed;
+  background-position: -530px 0px;
+  .title {
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    margin: 100px 0px;
+    font-size: 70px;
+    text-shadow: 1px 1px 1px #000;
+  }
+  blockquote {
+    display: inline-block;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    position: relative;
+    font-family: Georgia, serif;
+    line-height: 1.2;
+    color: #eee;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-left: 10px solid #aaa;
+    border-right: 2px solid #aaa;
+    box-shadow: 2px 2px 15px #ccc;
+    i {
+      font-size: 15px;
+      color: #aaa;
+    }
+    &::before {
+      content: "\201C"; /*Unicode for Left Double Quote*/
+      font-size: 60px;
+      font-weight: bold;
+      position: absolute;
+      left: 10px;
+      top: 5px;
+    }
+  }
+  .bounce {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 1px 1px 2px black;
+  }
+
+  .bounce i {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(-10px);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+}
+//HERO END//
+
 //ABOUT START//
 #about {
   display: grid;
@@ -228,46 +228,6 @@ nav {
   grid-column: 2;
 }
 //ABOUT END//
-
-//SKILLS START//
-// #skills{
-//   background:url(images/codepic.png) no-repeat fixed;
-//   background-size: cover;
-//   text-align: center;
-//   padding-bottom:50px;
-
-//     h1{
-//       color: white;
-//       text-shadow: 2px 2px 0px black;
-//       font-size: 40px;
-//     }
-//     .icon{
-//       border:0.1px solid red;
-//       font-size: 70px;
-//       margin: 30px;
-//       padding-bottom: 40px;
-//       color:rgb(0,100,216);
-//       text-shadow: 2px 2px 3px #111;
-//     }
-//     i:hover{
-//       color: rgb(243, 156, 18);
-//     }
-// }
-
-// .icon:hover .caption{
-//   display: block;
-//   text-shadow: 1px 1px 1px black;
-//   position: absolute;
-//   left:0;
-//   right:0;
-//   color:white;
-// }
-
-// .caption{
-//   display:none;
-//   font-size: 19px;
-//   margin:0px;
-// }
 
 #skills {
   background: url(images/codepic.png) no-repeat fixed;
@@ -391,7 +351,8 @@ nav {
         color: $color_grey_dark;
         margin-top: 5px;
       }
-      .open-link {
+
+      .view-site {
         text-align: center;
         text-decoration: none;
         color: #2b2d42;
@@ -407,6 +368,11 @@ nav {
           color: rgb(100, 100, 150);
           text-decoration: underline;
         }
+      }
+      .view-code {
+        @extend .view-site;
+        right: 61%;
+        left: 0;
       }
     }
     p {
@@ -454,10 +420,14 @@ nav {
             right: -10px;
             transform: skew(2deg);
           }
-          a {
+          .view-site {
             right: 40%;
             left: 0;
             bottom: 0;
+          }
+          .view-code {
+            right: 0;
+            left: 61%;
           }
         }
       }
@@ -552,6 +522,12 @@ nav {
   max-height: 100px;
 }
 
+@media (hover: none) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
+
 //MEDIA QUERIES START//
 @media (min-width: 700px) {
   .title {
@@ -583,7 +559,8 @@ nav {
     transition: background-color 0.5s ease 0s;
   }
   .hero {
-    background-position: 0px 0px;
+    background-image: url("https://res.cloudinary.com/mtreeves24/image/upload/c_scale,w_2898/v1589193910/Portfolio/jeremy-bishop-iyrJnPlkP68-unsplash.webp"cover);
+    background-position: -300px 0px;
   }
   .overlay {
     display: block;
@@ -593,7 +570,12 @@ nav {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
+  .hero {
+    background-image: url("https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_auto:best,w_2321/v1589193910/Portfolio/jeremy-bishop-iyrJnPlkP68-unsplash.webp"cover);
+    background-position: 0px;
+    background-size: 100vw;
+  }
   #about {
     grid-template-columns: 1fr 5fr 10fr 1fr;
     align-items: center;
