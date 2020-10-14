@@ -23,7 +23,7 @@ async function draw(el) {
 
 document.querySelectorAll(".title").forEach(draw);
 
-// code to turn navbar opaque on scroll
+//code to turn navbar opaque on scroll
 var nav = document.querySelector("nav");
 
 window.addEventListener("scroll", function (event) {
@@ -38,14 +38,44 @@ window.addEventListener("scroll", function (event) {
   }
 });
 
-// code to open and close hamburger menu
-const hamburger = document.querySelector(".menu-toggle");
-const hamburgerItem = document.querySelectorAll(".hamburger-item");
+// // code to open and close hamburger menu
+// const hamburger = document.querySelector(".menu-toggle");
+// const hamburgerItem = document.querySelectorAll(".hamburger-item");
 
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-if (viewportWidth < 679) {
-  hamburgerItem.forEach((x) =>
-    x.addEventListener("click", () => document.querySelector("ul").classList.toggle("opening"))
-  );
-  hamburger.addEventListener("click", () => document.querySelector("ul").classList.toggle("opening"));
-}
+// var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+// if (viewportWidth < 679) {
+//   hamburgerItem.forEach((x) =>
+//     x.addEventListener("click", () =>
+//       document.querySelector("ul").classList.toggle("opening")
+//     )
+//   );
+//   hamburger.addEventListener("click", () =>
+//     document.querySelector("ul").classList.toggle("opening")
+//   );
+// }
+
+//////////NAVBAR HAMBURGER DROPDOWN//////////
+const ul = document.querySelector("ul");
+const hamburgerToggle = document.querySelector(".menu-toggle");
+
+hamburgerToggle.addEventListener("click", function () {
+  ul.classList.toggle("opening");
+  this.classList.toggle("open");
+});
+
+document.querySelectorAll("a").forEach((item) =>
+  item.addEventListener("click", function () {
+    ul.classList.remove("opening");
+    hamburgerToggle.classList.remove("open");
+  })
+);
+
+//////////ACTIVATE DROPDOWN ON CLICK//////////
+const dropdown = document.querySelector(".dropdown");
+const dropdownRoot = document.querySelector(".dropdown-root");
+
+dropdownRoot.addEventListener("click", function () {
+  dropdown.classList.contains("dropdown-hide")
+    ? dropdown.classList.toggle("dropdown-show")
+    : null;
+});

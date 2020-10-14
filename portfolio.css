@@ -14,54 +14,51 @@ body {
   background-color: #2b2d42;
   color: white; }
 
-nav {
-  position: fixed;
-  margin: 0;
-  padding: 0;
+.nav {
   width: 100%;
-  font-size: 25px;
+  font-size: 16px;
+  position: fixed;
   z-index: 10; }
-  nav ul {
+  .nav .nav-ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: none; }
-  nav ul.opening {
+  .nav ul.opening {
     display: block;
-    padding-top: 0em;
-    height: 30px;
-    width: 100%;
     text-align: center;
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 700; }
-  nav li {
-    border-bottom: 1px solid #f6f4e2; }
-  nav li:last-child {
-    border-bottom: none; }
-  nav a {
+  .nav li {
+    background: #2b2d42;
+    opacity: 0.95;
+    border-bottom: 1px solid #f6f4e2;
+    padding: 10px;
+    color: #eee; }
+  .nav a {
     color: #eee;
     display: block;
-    padding: 10px 30px 10px 5px;
-    text-decoration: none;
-    background: #2b2d42; }
-  nav a:hover,
-  nav nav a:focus {
+    text-decoration: none; }
+  .nav li:hover,
+  .nav nav a:focus {
     color: #f3c412; }
 
 /* CSS MENU TOGGLE*/
 .menu-toggle {
   position: fixed;
-  padding: 0.8em;
-  top: 0.25em;
-  right: 0.5em;
-  cursor: pointer; }
+  padding: 1.5em;
+  top: 0em;
+  right: 0em;
+  cursor: pointer;
+  border-radius: 0% 0% 0% 10%;
+  z-index: 2; }
 
 .hamburger,
 .hamburger::before,
 .hamburger::after {
   content: "";
   display: block;
-  background: #ebebd3;
+  background: #fff;
   height: 3px;
   width: 2em;
   border-radius: 1px;
@@ -87,6 +84,42 @@ nav {
   -webkit-transform: translateY(-1px) rotate(-90deg);
   transform: translateY(-1px) rotate(-90deg); }
 
+@media screen and (min-width: 700px) {
+  .menu-toggle {
+    display: none; }
+
+  .nav {
+    display: block;
+    padding: 2px; }
+    .nav .nav-ul {
+      display: flex;
+      justify-content: space-around; }
+      .nav .nav-ul li {
+        background: none;
+        color: white;
+        font-size: 1.5em;
+        text-shadow: 1px 1px black;
+        border: none; }
+    .nav .dropdown-root {
+      position: relative; }
+      .nav .dropdown-root:hover {
+        text-decoration: underline; }
+    .nav .dropdown {
+      grid-template-columns: repeat(6, 1fr);
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      font-size: 0.8em;
+      font-weight: 700; }
+      .nav .dropdown li {
+        height: 40px;
+        border: 1px solid white;
+        background: url("https://res.cloudinary.com/mtreeves24/image/upload/v1601992915/Exotic%20Explorers/triangles/triangles-green-wide.svg") center;
+        background-size: 300%; }
+    .nav a:hover,
+    .nav nav a:focus {
+      color: white;
+      text-decoration: underline; } }
 .solid-navbar {
   background: #2b2d42;
   opacity: 90%;
@@ -132,14 +165,14 @@ nav {
     position: relative;
     font-family: Georgia, serif;
     line-height: 1.2;
-    font-size: 1em;
+    font-size: 1.2em;
     color: #eee;
     background-color: rgba(0, 0, 0, 0.8);
     border-left: 10px solid #aaa;
     border-right: 2px solid #aaa;
     box-shadow: 2px 2px 15px #ccc; }
     .hero blockquote i {
-      font-size: 15px;
+      font-size: 20px;
       color: #aaa; }
     .hero blockquote::before {
       content: "\201C";
@@ -176,7 +209,8 @@ nav {
 #about {
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
-  padding: 30px 0px; }
+  padding: 30px 0px;
+  font-size: 1.3em; }
 
 .about-image {
   margin: auto;
@@ -192,6 +226,7 @@ nav {
 #skills {
   background: url(images/codepic.png) no-repeat fixed;
   background-size: cover;
+  background-position: center;
   text-align: center; }
   #skills h1 {
     color: white;
@@ -205,7 +240,8 @@ nav {
       font-size: 70px;
       margin: 0px 5px;
       color: #0064d8;
-      text-shadow: 2px 2px 3px #111; }
+      text-shadow: 2px 2px 3px #111;
+      padding-bottom: 20px; }
     #skills .skill-icons i:hover {
       color: #f39c12; }
 
@@ -216,7 +252,7 @@ nav {
 
 .caption {
   visibility: hidden;
-  font-size: 19px; }
+  font-size: 0.3em; }
 
 #portfolio {
   padding: 15px;
@@ -368,14 +404,15 @@ nav {
 #get-in-touch {
   display: grid;
   grid-gap: 5px;
-  grid-template-columns: repeat(auto-fill, minmax(0.3fr, 5fr)); }
+  grid-template-columns: repeat(auto-fill, minmax(0.3fr, 5fr));
+  margin: 0px 20px; }
   #get-in-touch legend {
+    margin-top: 20px;
     font-size: 40px;
     font-weight: 500; }
   #get-in-touch .social i {
     font-size: 50px;
     padding: 15px;
-    margin: 5px;
     color: #0064d8; }
   #get-in-touch .social i:hover {
     color: #f39c12; }
@@ -429,20 +466,6 @@ nav {
   .menu-toggle {
     display: none; }
 
-  nav ul {
-    display: flex;
-    justify-content: flex-end; }
-  nav li {
-    border-bottom: none; }
-  nav a {
-    background: none;
-    height: 10%; }
-  nav a:hover,
-  nav nav a:focus {
-    transition: transform 0.1s;
-    transform: scale(1.1);
-    color: white; }
-
   .opaque-navbar {
     transition: background-color 0.5s ease 0s; }
 
@@ -460,6 +483,8 @@ nav {
     background-image: url("https://res.cloudinary.com/mtreeves24/image/upload/c_scale,q_auto:best,w_2321/v1589193910/Portfolio/jeremy-bishop-iyrJnPlkP68-unsplash.webp" cover);
     background-position: 0px;
     background-size: 100vw; }
+    .hero .title {
+      padding-top: 90px; }
 
   #about {
     grid-template-columns: 1fr 5fr 10fr 1fr;
@@ -479,6 +504,8 @@ nav {
 
   #skills .skill-icons {
     padding: 0px 160px; }
+    #skills .skill-icons i {
+      padding: 10px; }
 
   .portfolio-card {
     max-width: 65%; } }
